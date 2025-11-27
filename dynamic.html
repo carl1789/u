@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>VIT: SDP / EDI / DT / Course — Simple</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>body{padding:12px;background:#f7f7f7}.card{margin-bottom:8px}</style>
+</head>
+<body>
+<div class="container">
+  <h4>Projects: SDP · EDI · DT · Course</h4>
+
+  <ul id="nav" class="nav nav-pills mb-2">
+    <li class="nav-item"><a class="nav-link active" data-t="#sdp">SDP</a></li>
+    <li class="nav-item"><a class="nav-link" data-t="#edi">EDI</a></li>
+    <li class="nav-item"><a class="nav-link" data-t="#dt">DT</a></li>
+    <li class="nav-item"><a class="nav-link" data-t="#course">Course</a></li>
+  </ul>
+
+  <div id="content">
+    <div id="sdp" class="card p-3">Software Development Project — industry-ready, teamwork, deployment.</div>
+    <div id="edi" class="card p-3 d-none">Enterprise & Design Innovation — UX, prototyping, startups.</div>
+    <div id="dt" class="card p-3 d-none">Digital Transformation — data, ML, analytics, research.</div>
+    <div id="course" class="card p-3 d-none">Course Projects — domain depth, labs, theory.</div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/js/bootstrap.min.js"></script>
+<script>
+$(function(){
+  $('#nav a').click(function(e){
+    e.preventDefault();
+    $('#nav a').removeClass('active');
+    $(this).addClass('active');
+    var t = $(this).data('t');
+    $('#content > div').addClass('d-none');
+    $(t).removeClass('d-none');
+  });
+});
+</script>
+</body>
+</html>
